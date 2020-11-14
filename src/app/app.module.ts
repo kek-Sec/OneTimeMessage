@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditComponent } from './edit/edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    NgbModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
