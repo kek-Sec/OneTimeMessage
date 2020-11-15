@@ -27,7 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    NgbModule,
+    NgbModule, AppRoutingModule,
     FormsModule, NgxCaptchaModule, ReactiveFormsModule],
   providers: [Toast],
   bootstrap: [AppComponent]

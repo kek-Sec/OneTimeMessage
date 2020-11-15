@@ -3,11 +3,11 @@
     <form>
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="email" class="form-control" id="title" placeholder="My new paste..." autofocussdas>
+            <input #title type="text" class="form-control" id="title" placeholder="My new paste..." autofocussdas>
         </div>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <label for="message">Message</label>
+            <textarea #message class="form-control" id="message" rows="8"></textarea>
         </div>
         <div class="form-row">
             <div class="form-group col">
@@ -61,31 +61,31 @@
               <legend class="col-form-label col-sm-2 pt-0">Expires:</legend>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" [checked]="onRead">
                   <label class="form-check-label" for="gridRadios1">
                     on Read
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" [checked]="OneDay">
                   <label class="form-check-label" for="gridRadios2">
                     1 day
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" >
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" [checked]="OneWeek">
                   <label class="form-check-label" for="gridRadios3">
                     1 week
                   </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4" >
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4" [checked]="OneMonth">
                     <label class="form-check-label" for="gridRadios4">
                       1 Month
                     </label>
                   </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5" [checked]="Never">
                 <label class="form-check-label" for="gridRadios5">
                     Never
                 </label>
