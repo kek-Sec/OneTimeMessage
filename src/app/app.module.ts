@@ -7,13 +7,14 @@ import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
 import { CreateComponent } from './create/create.component';
-import { EditComponent } from './edit/edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Toast } from './toast';
 import { ToastsContainer } from './toast-container.component';
 import { FormsModule } from '@angular/forms';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DoneComponent } from './done/done.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     NavComponent,
     CreateComponent,
-    EditComponent,
-    ToastsContainer
+    ToastsContainer,
+    DoneComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
