@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Toast } from './toast';
+import { ToastsContainer } from './toast-container.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     NavComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    ToastsContainer
   ],
   imports: [
     BrowserModule,
     NgbModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [Toast],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
