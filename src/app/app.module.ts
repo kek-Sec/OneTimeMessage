@@ -11,6 +11,9 @@ import { EditComponent } from './edit/edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Toast } from './toast';
 import { ToastsContainer } from './toast-container.component';
+import { FormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,7 @@ import { ToastsContainer } from './toast-container.component';
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule,
-  ],
+    FormsModule, NgxCaptchaModule, ReactiveFormsModule],
   providers: [Toast],
   bootstrap: [AppComponent]
 })
