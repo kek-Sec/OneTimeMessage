@@ -29,7 +29,7 @@
             </div>
             <div class="col">
                 <div class="form-group col-auto">
-                    <button type="button" id="save_btn" class="btn btn-warning float-right">Continue</button>
+                    <button type="button" id="save_btn" (click)="open(content)" class="btn btn-warning float-right">Continue</button>
                 </div>
             </div>
         </div>
@@ -105,9 +105,7 @@
       <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
     </div>
   </ng-template>
-  
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-  
+    
 
 
 <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
