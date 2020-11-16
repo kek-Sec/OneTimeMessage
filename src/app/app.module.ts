@@ -15,6 +15,10 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DoneComponent } from './done/done.component';
 import { ViewComponent } from './view/view.component';
+import { HttpClientModule } from '@angular/common/http';
+import {getMessage} from '../../src/app/scripts/getMessage';
+import {postMessage} from '../../src/app/scripts/postMessage';
+import { test } from './scripts/test';
 
 @NgModule({
   declarations: [
@@ -28,10 +32,11 @@ import { ViewComponent } from './view/view.component';
     ViewComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     NgbModule, AppRoutingModule,
     FormsModule, NgxCaptchaModule, ReactiveFormsModule],
-  providers: [Toast],
+  providers: [Toast,getMessage,postMessage,test],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

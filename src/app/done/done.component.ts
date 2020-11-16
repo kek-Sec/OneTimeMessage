@@ -13,7 +13,6 @@ export class DoneComponent implements OnInit {
   ngOnInit(): void {
   }
   copyToClipBoard() {
-    
     this.toastService.show('Text copied to clipboard!', { classname: 'bg-success text-light', delay: 10000 });
   }
 }
