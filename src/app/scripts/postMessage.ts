@@ -5,12 +5,12 @@ import { Message } from './Message';
 import { test } from './test';
 
 @Injectable()
-export class postMessage{
+export class postMessage {
+  constructor(private http: HttpClient, private tester: test) {}
 
-
-    constructor(private http:HttpClient,private tester:test){}
-
-    addMessage(message: Message): Observable<JSON> {
-        return this.http.post<JSON>(this.tester.POST_IP, message, {responseType: 'json'});
-      }
+  addMessage(message: Message): Observable<JSON> {
+    return this.http.post<JSON>(this.tester.POST_IP, message, {
+      responseType: 'json',
+    });
+  }
 }
