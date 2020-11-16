@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {getMessage} from '../../src/app/scripts/getMessage';
 import {postMessage} from '../../src/app/scripts/postMessage';
 import { test } from './scripts/test';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { test } from './scripts/test';
     ViewComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
     HttpClientModule,
     BrowserModule,
     NgbModule, AppRoutingModule,

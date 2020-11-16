@@ -7,6 +7,7 @@ import { ViewComponent } from './view/view.component';
 const routes: Routes = [
   {path: 'welcome', component:LandingComponent},
   {path: 'done' , component: DoneComponent },
+  {path: 'view/undefined', redirectTo: '/welcome',pathMatch:'full'},
   {path: 'view/:id' , component:ViewComponent },
   {path: '', redirectTo: '/welcome',pathMatch:'full'},
   {path: '**', redirectTo: '/welcome',pathMatch:'full'}
