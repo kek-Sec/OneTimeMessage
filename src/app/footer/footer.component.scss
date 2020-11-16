@@ -1,16 +1,15 @@
 
 /*FOOTER*/
-
 footer {
     background: #3e5050;
     background: -webkit-linear-gradient(59deg, #191d1d, #16222A);
     background: linear-gradient(59deg, #496868, #16222A);
     color: white;
-    margin-top:100px;
     bottom:0;
-    position: absolute;
+    clear: both;
+    position: fixed;
     width: 100%;
-    
+    max-height: 8rem;
   }
   
   footer a {
