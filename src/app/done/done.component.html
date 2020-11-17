@@ -1,14 +1,28 @@
-
 <navigation></navigation>
 <div class="container">
-    <label for="basic-url">Your message is ready!</label>
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon3">https://onetimemessage.herokuapp.com/</span>
+  <label for="basic-url">Your message is ready!</label>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon3"
+        >https://onetimemessage.herokuapp.com/</span
+      >
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="{{ id }}"
+      readonly
+    />
   </div>
-  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="{{id}}" readonly>
-</div>
-<button type="button" (click)="copyToClipBoard()" class="pull-right btn btn-info btn-lg"><i class="far fa-clipboard"></i> Copy to clipboard</button>
+  <button
+    type="button"
+    (click)="copyToClipBoard()"
+    class="pull-right btn btn-info btn-lg"
+  >
+    <i class="far fa-clipboard"></i> Copy to clipboard
+  </button>
 </div>
 
 <app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
