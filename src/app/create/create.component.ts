@@ -43,7 +43,7 @@ export class CreateComponent implements OnInit {
     public toastService: Toast,
     private modalService: NgbModal,
     private formBuilder: FormBuilder,
-    private router:Router
+    private router: Router
   ) {}
 
   new_message: Message;
@@ -63,8 +63,8 @@ export class CreateComponent implements OnInit {
         this.post_observable = this.post_Message.addMessage(this.new_message);
         this.post_observable.subscribe({
           next: (data) => {
-            let x = data['createdProduct']['_id'];;
-            localStorage.setItem("id$",btoa(x));
+            let x = data['createdProduct']['_id'];
+            localStorage.setItem('id$', btoa(x));
             console.log(btoa(x));
             this.showSuccess('Done!');
             this.router.navigate(['/done']);
