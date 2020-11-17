@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   searchId: number;
+  navbarOpen = false;
+
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 }
