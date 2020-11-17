@@ -6,6 +6,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Message } from '../scripts/Message';
 import { Observable } from 'rxjs';
 import { postMessage } from '../scripts/postMessage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create',
@@ -41,7 +42,8 @@ export class CreateComponent implements OnInit {
     private post_Message: postMessage,
     public toastService: Toast,
     private modalService: NgbModal,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router:Router
   ) {}
 
   new_message: Message;
@@ -61,9 +63,11 @@ export class CreateComponent implements OnInit {
         this.post_observable = this.post_Message.addMessage(this.new_message);
         this.post_observable.subscribe({
           next: (data) => {
-            let x = data;
-            console.log(data['createdProduct']['_id']);
+            let x = data['createdProduct']['_id'];;
+            localStorage.setItem("id$",btoa(x));
+            console.log(btoa(x));
             this.showSuccess('Done!');
+            this.router.navigate(['/done']);
           },
         });
       } else {
