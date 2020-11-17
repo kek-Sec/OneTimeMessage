@@ -17,6 +17,8 @@
     />
   </div>
   <button
+    ngxClipboard
+    [cbContent]="id"
     type="button"
     (click)="copyToClipBoard()"
     class="pull-right btn btn-info btn-lg"

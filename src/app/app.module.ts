@@ -21,6 +21,8 @@ import {postMessage} from '../../src/app/scripts/postMessage';
 import { test } from './scripts/test';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClipboardModule } from 'ngx-clipboard';
+ 
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ViewComponent
   ],
   imports: [
+    ClipboardModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
     HttpClientModule,

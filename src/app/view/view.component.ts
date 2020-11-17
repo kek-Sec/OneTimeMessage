@@ -21,7 +21,7 @@ export class ViewComponent implements OnInit {
   msg: Message;
   mx: Observable<Message>;
 
-  show_notFound: Boolean = false;
+  show_notFound: Boolean = true;
 
   constructor(
     private spinner: NgxSpinnerService,
@@ -44,9 +44,8 @@ export class ViewComponent implements OnInit {
   subscribe() {
     this.mx.subscribe({
       next: (data) => {
-        console.log(data);
         this.msg = data;
-        this.show_notFound = this.msg.message_body == undefined;
+        if(this.msg.message_body === undefined) {this.show_notFound = true;} else {this.show_notFound = false;}
         if (!this.show_notFound) {
           this.populateTextboxes();
         }
@@ -59,12 +58,10 @@ export class ViewComponent implements OnInit {
     this.setExpires();
   }
   setExpires() {
-    if (this.msg.message_burn_on_read != undefined) {
       if (this.msg.message_burn_on_read) {
-        this.Expires == 'On read!';
+        this.Expires = 'On read!';
         return;
       }
-    }
     this.Expires = this.msg.expireAt.toString();
   }
 }
