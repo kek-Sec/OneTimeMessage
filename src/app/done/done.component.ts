@@ -5,26 +5,25 @@ import { Toast } from '../toast';
 @Component({
   selector: 'app-done',
   templateUrl: './done.component.html',
-  styleUrls: ['./done.component.scss']
+  styleUrls: ['./done.component.scss'],
 })
 export class DoneComponent implements OnInit {
+  constructor(public toastService: Toast, private router: Router) {}
 
-  constructor(public toastService: Toast,private router:Router) { }
-
-  id:String;
+  id: String;
 
   ngOnInit(): void {
-    if(localStorage.getItem("id$") === null)
-    {
-      console.log("ee");
+    if (localStorage.getItem('id$') === null) {
+      console.log('ee');
       this.router.navigate(['/welcome']);
-    }
-    else
-    {
-      this.id = localStorage.getItem("id$");
+    } else {
+      this.id = localStorage.getItem('id$');
     }
   }
   copyToClipBoard() {
-    this.toastService.show('Text copied to clipboard!', { classname: 'bg-success text-light', delay: 10000 });
+    this.toastService.show('Text copied to clipboard!', {
+      classname: 'bg-success text-light',
+      delay: 10000,
+    });
   }
 }
